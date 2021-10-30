@@ -1,0 +1,61 @@
+<link rel="stylesheet" href ="/content/loginStyle.css">
+</head>
+<body>
+<div class="container">
+   <br><br>
+        <article> 
+       <table class="contactInfo">
+           <tr class="contactMe">    
+               <td class="callIcon"><ion-icon name="call"></ion-icon></td>
+               <td class="callData">Login!</td>              
+           </tr>
+        </table>
+      <br>
+<div class="row">
+    <div class="offset-md-3 col-md-6 col-sm-12">
+          <div class="login" id="contentArea">
+              
+
+              <!-- message area -->
+              <% if(messages.length > 0) { %>
+              <div id="messageArea" class="alert alert-danger">
+                <%= messages %>
+              </div>
+              <% } %>
+
+              <form id="loginForm" novalidate method="POST">
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <ion-icon name="contacts"></ion-icon>
+                    </span>&nbsp;
+                    <input type="text" class="form-control" id="username" name="username"  required
+                    value="" placeholder="Enter your username">
+                  </div>
+                </div>
+                <br>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <ion-icon name="unlock"></ion-icon>
+                    </span>&nbsp;
+                    <input type="password" class="form-control" id="password" name="password"  required
+                    value="" placeholder="Enter your password">
+                  </div>
+                 
+                </div>                                        
+                <div class="text-end mt-2">
+                  <button id="loginButton" type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</button>
+                  <button id="cancelButton" type="reset" class="btn btn-warning"><i class="fas fa-undo"></i> Cancel</button>
+                </div>
+              </form>
+             
+          </div><br>
+          <p >
+            Don't possess an account? 
+            <a class="register" href="/auth/register">Register Today!</a>
+          </p>
+    </div>
+</div>  
+    </article>
+</div>

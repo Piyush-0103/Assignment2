@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%- title %> - Piyush
+    </title>
+    <!-- Filename- <%- title %>.ejs
+        StudentName - Piyush
+        StudentId - 301169193
+        Date - October 30,2021
+         -->
+    
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+        
+<body>
+       <div class="container">
+        <% if(displayName) { %>
+            <nav>
+                <img class="userPic" src="/assets/images/customLogo.png" alt="profile picture">
+                <div class="userDetails">
+                    <h1>Piyush's Portfolio</h1>          
+                   
+                </div>
+                <a href="/"><div class="home"><ion-icon name="home"></ion-icon>Home</div></a>
+                <a href="/about"><div class="about"><ion-icon name="information-circle"></ion-icon>About</div></a>
+                <a href="/projects"><div class="project"><ion-icon name="folder-open"></ion-icon>Projects</div></a>
+                <a href="/services"><div class="services"><ion-icon name="laptop"></ion-icon>Services</div></a>
+                <a href="/contact"><div class="contact"><ion-icon name="call"></ion-icon>Contact</div></a>
+                <a href="/contact/list"><div class="contactList"><ion-icon name="list-box"></ion-icon>Business Contact List</div></a>
+                <a href="/auth/logout"><div class="loginIcon"><ion-icon name="log-out"></ion-icon>Logout</div></a>
+            </nav>
+           
+           <% } else { %>
+            <nav>
+                <img class="userPic" src="/assets/images/customLogo.png" alt="profile picture">
+                <div class="userDetails">
+                    <h1>Piyush's Portfolio</h1>          
+                   
+                </div>
+                <a href="/"><div class="home"><ion-icon name="home"></ion-icon> Home</div></a>
+                <a href="/about"><div class="about"><ion-icon name="information-circle"></ion-icon>About</div></a>
+                <a href="/projects"><div class="project"><ion-icon name="folder-open"></ion-icon>Projects</div></a>
+                <a href="/services"><div class="services"><ion-icon name="laptop"></ion-icon>Services</div></a>
+                <a href="/contact"><div class="contact"><ion-icon name="call"></ion-icon>Contact</div></a>
+                <a href="/auth/login"><div class="loginIcon"><ion-icon name="log-in"></ion-icon>Login</div></a>
+            </nav>
+          
+           <% } %>
+        
